@@ -1,122 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import index from "./pages/index";
+import About from "./website/about";
+<websith></websith>/About;
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
 
-        body {
-            background-color: #f5f5f5;
-        }
+// App Component
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<index />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        nav {
-            background-color: white;
-            padding: 25px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: #3498db;
-        }
-
-        .main-content {
-            background-color: white;
-            padding: 40px;
-        }
-
-        .section {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-            padding: 20px;
-            min-height: 400px;
-        }
-
-        .section h2 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-        }
-
-        .section p {
-            line-height: 1.6;
-            color: #666;
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <div class="nav-content">
-            <div class="logo">Modern Website</div>
-            
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </nav>
-
-    <section class="main-content">
-        <h1>Welcome to Our Modern Website</h1>
-        
-        <!-- Content of your home page -->
-        <p>This is the main content area of your website. You can add various sections and pages here.</p>
-    </section>
-
-    <section class="section">
-        <h2>About Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </section>
-
-    <section class="section">
-        <h2>Our Services</h2>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </section>
-
-    <!-- Add more sections as needed -->
-</body>
-</html>
+export default App;
